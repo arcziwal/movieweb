@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%1&+84e%-&70^n180wp=h1fg2qjct$)t7hi*xxy!w#w0o#q_w-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arczi.herokuapp.com']
 
 
 # Application definition
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'mivieweb_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'd1nvsgpne9u9kt',
+        'NAME': 'd6jqp607p7or79',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'opoietyhzwblqh',
-        'PASSWORD': '0170c212fd32c744759bc41d98786e736a7cd8f1ecc267fbb0add62826492c4f',
-        'HOST': 'ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432',
+        'USER': 'hmsbqrmagyipyy',
+        'PASSWORD': '6d17e4c540b3c9bb16db9a0e139cc2344de16e960ef5e214527619a3df122fb0',
+        'HOST': 'ec2-176-34-105-15.eu-west-1.compute.amazonaws.com',
     }
 }
 
