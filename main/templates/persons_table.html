@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Osoby w bazie danych</title>
+</head>
+<body>
+<h2>Osoby obecne w bazie danych strony:</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Imię</td>
+            <td>Nazwisko</td>
+            <td>Data urodzenia</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in persons_in_db %}
+            <tr>
+                <td>{{person.first_name}}</td>
+                <td>{{person.last_name}}</td>
+                <td>{{person.birthdate|date:'d-m-Y'}}</td>
+                <td><a href="edit_person/?id={{person.pk}}"><button>Edytuj</button></a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/add_person/"><button>Dodaj osobę</button></a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <td>Tytuł</td>
+            <td>Rok wydania</td>
+            <td>Gatunek</td>
+            <td>Reżyseria</td>
+            <td>Scenariusz</td>
+            <td>Ocena na Movieweb</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for movie in movies_in_db %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.release_date.year }}</td>
+                <td>{% for i in movie.genre.all %}{{ i.name }}{% endfor %}</td>
+                <td>{{ movie.director.first_name }} {{movie.director.last_name }}</td>
+                <td>{{ movie.screenplay.first_name }} {{movie.screenplay.last_name }}</td>
+                <td>{{ movie.rating }}</td>
+                <td><a href="/movie/?id={{ movie.pk }}">Więcej szczegółów</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/"><button>Powrót na stronę główną</button></a>
+</body>
+</html>

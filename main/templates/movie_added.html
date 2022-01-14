@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomyślnie dodano film</title>
+</head>
+<body>
+<h2>Film został dodany do bazy danych</h2>
+<p>Tytuł: {{ movie.title }}</p>
+<p>Reżyser: {{ movie.director }}</p>
+<p>Scenariusz: {{ movie.screenplay }}</p>
+<p>Data premiery: {{ movie.release_date }}</p>
+<p>Ocena: {{ movie.rating }}</p>
+<p>Gatunek: {{ movie.genre }}</p>
+<br>
+<a href="/"><button>Powrót na stronę główną</button></a>
+<a href="/add_movie"><button>Dodaj kolejny film</button></a>
+</body>
+</html>

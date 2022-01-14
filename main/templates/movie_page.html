@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie.title }}</title>
+</head>
+<body>
+    <h2>{{ movie.title }}</h2>
+    <p>Data premiery: {{movie.release_date|date:'d-m-Y'}}</p>
+    <p>Ocena filmu: {{movie.rating}}</p><br>
+    <p>Gatuenk: {% for i in movie.genre.all %}{{ i.name }}{% endfor %}</p>
+    <p>Reżyseria: {{movie.director.first_name}} {{movie.director.last_name}}</p>
+    <p>Scenariusz: {{movie.screenplay.first_name}} {{movie.screenplay.last_name}}</p><br>
+<a href="/"><button>Powrót na stronę główną</button></a>
+<a href="/movies/"><button>Powrót do listy filmów</button></a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj film do bazy danych</title>
+</head>
+<body>
+<h2>Wypełnij poniższe pola i prześlij dane, aby dodać film do bazy danych</h2>
+<form action="/add_movie/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Prześlij">
+</form>
+<br>
+<h2>Kliknij <a href="/">tutaj</a> aby powrócić do głównego menu</h2>
+</body>
+</html>
