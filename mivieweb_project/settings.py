@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'mivieweb_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'movieweb',
+        'NAME': 'd1nvsgpne9u9kt',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'postgres',
-        'PASSWORD': 'coderslab',
-        'HOST': '127.0.0.1',
+        'USER': 'opoietyhzwblqh',
+        'PASSWORD': '0170c212fd32c744759bc41d98786e736a7cd8f1ecc267fbb0add62826492c4f',
+        'HOST': 'ec2-176-34-105-15.eu-west-1.compute.amazonaws.com:5432',
     }
 }
 
