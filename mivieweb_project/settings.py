@@ -79,11 +79,12 @@ WSGI_APPLICATION = 'mivieweb_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'd6jqp607p7or79',
+        'NAME': 'd7upifkklpamva',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'hmsbqrmagyipyy',
-        'PASSWORD': '6d17e4c540b3c9bb16db9a0e139cc2344de16e960ef5e214527619a3df122fb0',
+        'USER': 'rfxccujuwaapkj',
+        'PASSWORD': '668a9a3a89345118f82686c6b06b6abc94c4d990eb100f1298ce2af14ee90c8b',
         'HOST': 'ec2-176-34-105-15.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -122,12 +123,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = "/static/"
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
